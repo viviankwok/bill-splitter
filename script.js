@@ -7,6 +7,10 @@ const assignItem = (i_row, i_col) => {
 
   let pxItem = px_row.querySelector(".price-of-item").value;
   console.log(pxItem);
+
+  // get name
+  let name = document.querySelector(`#person-${i_col}`).value;
+  console.log(name);
 };
 
 // runs when generate-table-btn is clicked
