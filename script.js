@@ -17,23 +17,29 @@ const generateTable = (e) => {
   // create rows: <tr>
   let tableTemplate = "";
   for (let i = 1; i <= numRows; i++) {
+    // if 1st row, create headers
     if (i === 1) {
       tableTemplate += "<th>Item Name</th><th>Item px</th>";
       for (let i = 1; i <= numCols - 2; i++) {
-        tableTemplate += "<th>Person Name</th>";
+        tableTemplate += `<th><input type='text' placeholder='Name ${i}'></th>`;
       }
-      //   tableTemplate += "<th>Person Name</th>";
+      //   for subsequent rows, create <tr>s
     } else {
       tableTemplate += "<tr>";
-      // create columns
+      // in each <tr>:
       for (let i = 1; i <= numCols; i++) {
+        // if 1st col, create input for item name
         if (i === 1) {
           tableTemplate +=
             '<td><input type="text" placeholder="food item"></input></td>';
-        } else if (i === 2) {
+        }
+        // if 2nd col, create input for item px
+        else if (i === 2) {
           tableTemplate +=
             '<td><input type="text" placeholder="item price"></input></td>';
-        } else {
+        }
+        // for subsequent columns, create general fields (to be updated)
+        else {
           tableTemplate +=
             '<td><input type="text" placeholder="testing input"></input></td>';
         }

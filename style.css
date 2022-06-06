@@ -1,4 +1,6 @@
-body {
+body,
+button,
+input {
   src: url("http://fonts.cdnfonts.com/css/gotham-rounded");
   font-family: "Gotham Rounded", sans-serif;
 }
