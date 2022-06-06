@@ -40,6 +40,14 @@ body {
   padding: 5px;
 }
 
+.gst-service-charge {
+  background-color: lightpink;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
 .summary-table {
   background-color: rgb(213, 172, 213, 0.75);
   margin: 5px;
