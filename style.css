@@ -63,8 +63,19 @@ body {
   justify-content: center;
 }
 
-.summary-table {
+.table-container {
   background-color: rgb(213, 172, 213, 0.75);
   margin: 5px;
   padding: 5px;
+}
+
+table,
+th,
+tr,
+td {
+  border: 1px solid;
+}
+
+table {
+  max-width: 90%;
 }
