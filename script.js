@@ -17,26 +17,30 @@ const generateTable = (e) => {
   // create rows: <tr>
   let tableTemplate = "";
   for (let i = 1; i <= numRows; i++) {
-    tableTemplate += "<tr>";
-    // create columns
-    for (let i = 1; i <= numCols; i++) {
-      if (i === 1) {
-        tableTemplate +=
-          '<td><input type="text" placeholder="food item"></input></td>';
-      } else if (i === 2) {
-        tableTemplate +=
-          '<td><input type="text" placeholder="item price"></input></td>';
-      } else {
-        tableTemplate +=
-          '<td><input type="text" placeholder="testing input"></input></td>';
+    if (i === 1) {
+      tableTemplate += "<th>Item Name</th><th>Item px</th><th>Person Name</th>";
+    } else {
+      tableTemplate += "<tr>";
+      // create columns
+      for (let i = 1; i <= numCols; i++) {
+        if (i === 1) {
+          tableTemplate +=
+            '<td><input type="text" placeholder="food item"></input></td>';
+        } else if (i === 2) {
+          tableTemplate +=
+            '<td><input type="text" placeholder="item price"></input></td>';
+        } else {
+          tableTemplate +=
+            '<td><input type="text" placeholder="testing input"></input></td>';
+        }
       }
+      tableTemplate += "</tr>";
     }
-    tableTemplate += "</tr>";
-  }
-  //   console.log(tableTemplate);
+    //   console.log(tableTemplate);
 
-  const testingTable = document.querySelector("#testing-table");
-  testingTable.innerHTML = tableTemplate;
+    const testingTable = document.querySelector("#testing-table");
+    testingTable.innerHTML = tableTemplate;
+  }
 };
 
 // listens for click on generate-table-btn
