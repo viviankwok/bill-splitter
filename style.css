@@ -65,7 +65,21 @@ body {
 
 .table-container {
   background-color: rgb(213, 172, 213, 0.75);
-  margin: 5px;
+  margin: 5px 5px 0px 5px;
+  padding: 5px;
+}
+
+.generate-results {
+  background-color: rgb(238, 193, 177);
+  margin: 0px 5px 0px 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.display-results {
+  background-color: rgb(165, 114, 114, 0.75);
+  margin: 0px 5px 0px 5px;
   padding: 5px;
 }
 
