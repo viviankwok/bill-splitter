@@ -1,0 +1,47 @@
+body {
+  src: url("http://fonts.cdnfonts.com/css/gotham-rounded");
+  font-family: "Gotham Rounded", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  padding: 5px;
+  background-color: rgba(102, 236, 142, 0.5);
+}
+
+.top-panel {
+  border: 1px solid black;
+  background-color: grey;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.instructions {
+  background-color: palegoldenrod;
+  width: 33.33%;
+  margin: 5px;
+  padding: 5px;
+}
+
+.num-pax {
+  background-color: palevioletred;
+  width: 33.33%;
+  margin: 5px;
+  padding: 5px;
+}
+
+.num-items {
+  background-color: paleturquoise;
+  width: 33.33%;
+  margin: 5px;
+  padding: 5px;
+}
+
+.summary-table {
+  background-color: rgb(213, 172, 213, 0.75);
+  margin: 5px;
+  padding: 5px;
+}
