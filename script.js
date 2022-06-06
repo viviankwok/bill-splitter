@@ -1,3 +1,5 @@
+const summary = {};
+
 const assignItem = (i_row, i_col) => {
   console.log(`assignItem invoked, i_row: ${i_row}, i_col: ${i_col}`);
 
@@ -11,6 +13,10 @@ const assignItem = (i_row, i_col) => {
   // get name
   let name = document.querySelector(`#person-${i_col}`).value;
   console.log(name);
+
+  //adds to summary object
+  summary[name] = pxItem;
+  console.log(summary);
 };
 
 // runs when generate-table-btn is clicked
