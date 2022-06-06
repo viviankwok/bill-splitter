@@ -95,4 +95,8 @@ document
 document.querySelector("#calculate-btn").addEventListener("click", () => {
   console.log("calculate invoked");
   console.log(summary);
+  let results = document.createElement("p");
+  //   to be updated
+  results.innerText = summary;
+  document.querySelector(".display-results").appendChild(results);
 });
