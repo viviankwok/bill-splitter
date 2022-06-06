@@ -18,7 +18,11 @@ const generateTable = (e) => {
   let tableTemplate = "";
   for (let i = 1; i <= numRows; i++) {
     if (i === 1) {
-      tableTemplate += "<th>Item Name</th><th>Item px</th><th>Person Name</th>";
+      tableTemplate += "<th>Item Name</th><th>Item px</th>";
+      for (let i = 1; i <= numCols - 2; i++) {
+        tableTemplate += "<th>Person Name</th>";
+      }
+      //   tableTemplate += "<th>Person Name</th>";
     } else {
       tableTemplate += "<tr>";
       // create columns
