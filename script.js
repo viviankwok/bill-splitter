@@ -73,12 +73,17 @@ const generateTable = (e) => {
     const testingTable = document.querySelector("#testing-table");
     testingTable.innerHTML = tableTemplate;
   }
-  document
-    .querySelector("#calculate-btn")
-    .addEventListener("click", () => console.log("calculate invoked"));
+  //   document
+  //     .querySelector("#calculate-btn")
+  //     .addEventListener("click", () => console.log("calculate invoked"));
 };
 
 // listens for click on generate-table-btn
 document
   .querySelector("#generate-table-btn")
   .addEventListener("click", generateTable);
+
+document.querySelector("#calculate-btn").addEventListener("click", () => {
+  console.log("calculate invoked");
+  console.log(summary);
+});
