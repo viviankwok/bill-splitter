@@ -7,15 +7,24 @@ const assignItem = (i_row, i_col) => {
   let px_row = document.querySelector(`#item-row-${i_row}`);
   console.log(px_row);
 
-  let pxItem = px_row.querySelector(".price-of-item").value;
+  let pxItem = parseFloat(px_row.querySelector(".price-of-item").value);
   console.log(pxItem);
+  console.log(typeof pxItem);
 
   // get name
   let name = document.querySelector(`#person-${i_col}`).value;
   console.log(name);
 
   //adds to summary object
-  summary[name] = pxItem;
+  const hasName = name in summary;
+  if (hasName) {
+    let value = summary[name];
+    value += pxItem;
+    summary[name] = value;
+  } else {
+    summary[name] = pxItem;
+  }
+
   console.log(summary);
 };
 
