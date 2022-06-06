@@ -40,8 +40,7 @@ const generateTable = (e) => {
         }
         // for subsequent columns, create general fields (to be updated)
         else {
-          tableTemplate +=
-            '<td><input type="text" placeholder="testing input"></input></td>';
+          tableTemplate += "<td id='me'><button>me</button></td>";
         }
       }
       tableTemplate += "</tr>";
