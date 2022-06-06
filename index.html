@@ -17,14 +17,15 @@
     <div class="container">
       <div class="header">Welcome to the Bill Splitter</div>
       <div class="top-panel">
-        <div class="instructions">Please assign each item to the right person and check the final tabulations below.</div>
+        
         <div class="num-pax">
-          <input type="text" placeholder="Enter number of pax"></input>
-          <button>Submit</button>
+          <input type="number" id="num-pax-inputBox" placeholder="Enter number of pax"></input>
         </div>
         <div class="num-items">
-          <input type="text" placeholder="Enter number of food items"></input>
-          <button>Submit</button>
+          <input type="number" id="num-food-inputBox" placeholder="Enter number of food items"></input>
+        </div>
+        <div class="create-table">
+          <button id ='generate-table-btn'>Generate Table</button>
         </div>
       </div>
       <!-- stretch goals -->

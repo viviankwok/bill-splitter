@@ -19,12 +19,15 @@ body {
   justify-content: center;
 }
 
-.instructions {
+.create-table {
   background-color: palegoldenrod;
   width: 33.33%;
   margin: 5px;
   padding: 5px;
   font-size: 0.9em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .num-pax {
@@ -32,6 +35,9 @@ body {
   width: 33.33%;
   margin: 5px;
   padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .num-items {
@@ -39,8 +45,16 @@ body {
   width: 33.33%;
   margin: 5px;
   padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+#num-pax-inputBox,
+#num-food-inputBox {
+  height: 85%;
+  width: 85%;
+}
 .gst-service-charge {
   background-color: lightpink;
   margin: 5px;
