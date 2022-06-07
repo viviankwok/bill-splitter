@@ -1,0 +1,151 @@
+:root {
+  --indigo: #355070;
+  --purple: #6d597a;
+  --rose: #b56576;
+  --coral: #e56b6f;
+  --tan: #eaac8b;
+}
+
+body,
+button,
+input {
+  src: url("http://fonts.cdnfonts.com/css/gotham-rounded");
+  font-family: "Gotham Rounded", sans-serif;
+  color: white;
+}
+
+body {
+  background-color: var(--tan);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/* TOP PANEL CONTENTS */
+.top-panel {
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* TOP PANEL CONTENTS */
+input {
+  background: transparent;
+  border: none;
+  text-align: center;
+  width: 80%;
+}
+
+.num-pax,
+.num-items,
+.create-table {
+  border-radius: 15px;
+  background-color: var(--coral);
+  width: 33.33%;
+  height: 25px;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.num-pax,
+.num-items {
+  font-size: 90%;
+}
+
+.num-pax:hover,
+.num-items:hover {
+  background-color: var(--rose);
+}
+
+#generate-table-btn {
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  width: 100%;
+}
+
+#generate-table-btn:hover,
+.create-table:hover {
+  background-color: var(--purple);
+  border: none;
+}
+
+::placeholder {
+  color: rgb(255, 255, 255, 0.75);
+}
+
+.generate-results {
+  border-radius: 15px;
+  height: 15px;
+  margin: 20px 5px 5px 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--purple);
+}
+
+#calculate-btn {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+}
+
+.generate-results:hover {
+  background-color: var(--indigo);
+}
+
+.display-results {
+  border-radius: 15px;
+  height: 15px;
+  margin: 20px 5px 5px 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--indigo);
+}
+
+.gst-service-charge {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.table-container {
+  margin: 5px 5px 0px 5px;
+  padding: 5px;
+}
+
+/* TABLE STYLING  */
+table,
+th,
+tr,
+td {
+  border: 1px solid;
+}
+
+#testing-table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+h3,
+#results {
+  margin: 0px 5px 0px 5px;
+}
+
+table {
+  background-color: var(--rose);
+}
