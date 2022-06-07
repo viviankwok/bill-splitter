@@ -92,9 +92,15 @@ td {
   border: 1px solid;
 }
 
-table {
-  width: 90%;
+#testing-table {
+  table-layout: fixed;
+  /* width: 100%; */
+  border-collapse: collapse;
 }
+
+/* td {
+  width: 50%;
+} */
 
 h3,
 #results {
