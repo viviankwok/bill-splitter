@@ -1,10 +1,7 @@
 const summary = {};
 
 const assignItem = (i_row, i_col) => {
-  // let checkBox = checkbox-for-${i_row}${i_col}
-
-  console.log(`assignItem invoked, i_row: ${i_row}, i_col: ${i_col}`);
-
+  let checkBox = document.querySelector(`#checkbox-for-${i_row}${i_col}`);
   // get item price
   let px_row = document.querySelector(`#item-row-${i_row}`);
   console.log(px_row);
@@ -17,17 +14,26 @@ const assignItem = (i_row, i_col) => {
   let name = document.querySelector(`#person-${i_col}`).value;
   console.log(name);
 
-  //adds to summary object
-  const hasName = name in summary;
-  if (hasName) {
-    let value = summary[name];
-    value += pxItem;
-    summary[name] = value;
+  if (checkBox.checked) {
+    // alert("true, box checked");
+    //adds to summary object
+    const hasName = name in summary;
+    if (hasName) {
+      let value = summary[name];
+      value += pxItem;
+      summary[name] = value;
+    } else {
+      summary[name] = pxItem;
+    }
+
+    console.log(summary);
   } else {
-    summary[name] = pxItem;
+    // alert("false, box unchecked");
+    summary[name] -= pxItem;
+    console.log(summary);
   }
 
-  console.log(summary);
+  console.log(`assignItem invoked, i_row: ${i_row}, i_col: ${i_col}`);
 };
 
 // runs when generate-table-btn is clicked
@@ -95,9 +101,13 @@ document
   .addEventListener("click", generateTable);
 
 document.querySelector("#calculate-btn").addEventListener("click", () => {
+  //remove previous content if any
+  let displayDiv = document.querySelector(".display-results");
+  displayDiv.innerText = "";
+
+  //create new results
   let displayHeader = document.createElement("h3");
   displayHeader.innerText = "Payment Summary";
-  let displayDiv = document.querySelector(".display-results");
   displayDiv.appendChild(displayHeader);
 
   console.log("calculate invoked");
