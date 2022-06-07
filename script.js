@@ -1,6 +1,8 @@
 const summary = {};
 
 const assignItem = (i_row, i_col) => {
+  // let checkBox = checkbox-for-${i_row}${i_col}
+
   console.log(`assignItem invoked, i_row: ${i_row}, i_col: ${i_col}`);
 
   // get item price
@@ -72,7 +74,7 @@ const generateTable = (e) => {
         // for subsequent columns, create "me" button
         else {
           //   tableTemplate += `<td id='me'><button id='name${i}'>me</button></td>`;
-          tableTemplate += `<td id="person-col-${i_col}"><input type="checkbox" id="myCheck" onclick="assignItem(${i_row}, ${i_col})"></td>`;
+          tableTemplate += `<td id="person-col-${i_col}"><input type="checkbox" id="checkbox-for-${i_row}${i_col}" onclick="assignItem(${i_row}, ${i_col})"></td>`;
         }
       }
       tableTemplate += "</tr>";
@@ -93,10 +95,20 @@ document
   .addEventListener("click", generateTable);
 
 document.querySelector("#calculate-btn").addEventListener("click", () => {
+  let displayHeader = document.createElement("h3");
+  displayHeader.innerText = "Payment Summary";
+  let displayDiv = document.querySelector(".display-results");
+  displayDiv.appendChild(displayHeader);
+
   console.log("calculate invoked");
-  console.log(summary);
-  let results = document.createElement("p");
-  //   to be updated
-  results.innerText = summary;
-  document.querySelector(".display-results").appendChild(results);
+  for (let name in summary) {
+    let displayText = `${name}: $${summary[name]}`;
+    console.log(displayText);
+
+    let results = document.createElement("p");
+    results.id = "results";
+    results.innerText = displayText;
+
+    displayDiv.appendChild(results);
+  }
 });

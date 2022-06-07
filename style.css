@@ -93,5 +93,10 @@ td {
 }
 
 table {
-  max-width: 90%;
+  width: 90%;
+}
+
+h3,
+#results {
+  margin: 0px 5px 0px 5px;
 }
