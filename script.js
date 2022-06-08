@@ -95,6 +95,7 @@ const generateTable = (e) => {
   calcBtn.id = "calculate-btn";
 
   const generateResultsDiv = document.querySelector(".generate-results");
+  generateResultsDiv.innerHTML = "";
   generateResultsDiv.style.backgroundColor = "var(--purple)";
   generateResultsDiv.addEventListener("mouseover", () => {
     generateResultsDiv.style.backgroundColor = "var(--indigo)";
