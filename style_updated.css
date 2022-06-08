@@ -110,9 +110,9 @@ input {
   height: 15px;
   margin: 20px 5px 5px 5px;
   padding: 5px;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   color: var(--indigo);
 }
 
@@ -134,6 +134,7 @@ th,
 tr,
 td {
   border: 1px solid;
+  text-align: center;
 }
 
 #testing-table {

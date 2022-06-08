@@ -57,10 +57,10 @@ const generateTable = (e) => {
   for (let i_row = 1; i_row <= numRows; i_row++) {
     // if 1st row, create headers
     if (i_row === 1) {
-      tableTemplate += "<th>Item Name</th><th>Item px</th>";
+      tableTemplate += "<th>Item Name</th><th>Item price</th>";
       for (let i_row = 1; i_row <= numCols - 2; i_row++) {
         let personNum = 2 + i_row;
-        tableTemplate += `<th><input type='text' id="person-${personNum}" placeholder='Name ${i_row}'></th>`;
+        tableTemplate += `<th><input type='text' id="person-${personNum}" placeholder='Enter name ${i_row}'></th>`;
       }
     }
     //   for subsequent rows, create <tr>s
@@ -71,11 +71,11 @@ const generateTable = (e) => {
         // if 1st col, create input for item name
         if (i_col === 1) {
           tableTemplate +=
-            '<td><input type="text" placeholder="food item"></input></td>';
+            '<td><input type="text" placeholder="Enter food item"></input></td>';
         }
         // if 2nd col, create input for item px
         else if (i_col === 2) {
-          tableTemplate += `<td><input type="text" class="price-of-item" placeholder="item price"></input></td>`;
+          tableTemplate += `<td><input type="text" class="price-of-item" placeholder="Enter item price"></input></td>`;
         }
         // for subsequent columns, create "me" button
         else {
@@ -117,8 +117,7 @@ document.querySelector("#calculate-btn").addEventListener("click", () => {
 
     let results = document.createElement("p");
     results.id = "results";
-    results.innerText = displayText;
-
+    results.innerHTML = displayText;
     displayDiv.appendChild(results);
   }
 });
