@@ -96,6 +96,12 @@ const generateTable = (e) => {
 
   const generateResultsDiv = document.querySelector(".generate-results");
   generateResultsDiv.style.backgroundColor = "var(--purple)";
+  generateResultsDiv.addEventListener("mouseover", () => {
+    generateResultsDiv.style.backgroundColor = "var(--indigo)";
+  });
+  generateResultsDiv.addEventListener("mouseleave", () => {
+    generateResultsDiv.style.backgroundColor = "var(--purple)";
+  });
   generateResultsDiv.appendChild(calcBtn);
 
   document.querySelector("#calculate-btn").addEventListener("click", () => {
