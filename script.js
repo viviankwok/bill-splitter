@@ -90,6 +90,36 @@ const generateTable = (e) => {
     const testingTable = document.querySelector("#testing-table");
     testingTable.innerHTML = tableTemplate;
   }
+  const calcBtn = document.createElement("button");
+  calcBtn.innerHTML = "Calculate";
+  calcBtn.id = "calculate-btn";
+
+  const generateResultsDiv = document.querySelector(".generate-results");
+  generateResultsDiv.style.backgroundColor = "var(--purple)";
+  generateResultsDiv.appendChild(calcBtn);
+
+  document.querySelector("#calculate-btn").addEventListener("click", () => {
+    //remove previous content if any
+    let displayDiv = document.querySelector(".display-results");
+    displayDiv.innerText = "";
+
+    //create new results
+    let displayHeader = document.createElement("h3");
+    displayHeader.innerText = "Payment Summary";
+    displayDiv.appendChild(displayHeader);
+
+    console.log("calculate invoked");
+    for (let name in summary) {
+      let displayText = `${name}: $${summary[name]}`;
+      console.log(displayText);
+
+      let results = document.createElement("p");
+      results.id = "results";
+      results.innerHTML = displayText;
+      displayDiv.appendChild(results);
+    }
+  });
+
   //   document
   //     .querySelector("#calculate-btn")
   //     .addEventListener("click", () => console.log("calculate invoked"));
@@ -99,25 +129,3 @@ const generateTable = (e) => {
 document
   .querySelector("#generate-table-btn")
   .addEventListener("click", generateTable);
-
-document.querySelector("#calculate-btn").addEventListener("click", () => {
-  //remove previous content if any
-  let displayDiv = document.querySelector(".display-results");
-  displayDiv.innerText = "";
-
-  //create new results
-  let displayHeader = document.createElement("h3");
-  displayHeader.innerText = "Payment Summary";
-  displayDiv.appendChild(displayHeader);
-
-  console.log("calculate invoked");
-  for (let name in summary) {
-    let displayText = `${name}: $${summary[name]}`;
-    console.log(displayText);
-
-    let results = document.createElement("p");
-    results.id = "results";
-    results.innerHTML = displayText;
-    displayDiv.appendChild(results);
-  }
-});
