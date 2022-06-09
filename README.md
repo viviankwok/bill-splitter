@@ -34,4 +34,4 @@ Stretch goals:
 
 # What's Better?
 
-Tablepartners Myriam and Nat shared that Splitwise is a good expenses sharing app, especially for group travels.
+Tablepartners Myriam and Nat shared that [Splitwise](https://www.splitwise.com/) is a good expenses sharing app, especially for group travels.
