@@ -17,13 +17,9 @@ The Bill Splitter allows you to visualise these information line by line, ensuri
 
 A summary table is generated based on the number of pax and number of food items entered. Enter the names and price of all items, and proceed to click the checkbox to assign a specific item to the specific person.
 
-# Getting Started
+# The Actual Thing
 
-Clone repo to your local git, or download all 3 files separately:
-
-1. index.html
-2. style_updated.css
-3. script.js
+Click [here](https://viviankwok.github.io/bill-splitter/).
 
 # What Can Be Better?
 
